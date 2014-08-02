@@ -1,0 +1,48 @@
+---
+abstract: 'Software for computational discovery of miRNAs in genomic sequneces'
+author: []
+build_requires:
+  Exporter: 0
+  ExtUtils::CBuilder: 0.21
+  Module::Build: 0.19
+  XSLoader: 0
+configure_requires:
+  Module::Build: 0.36
+generated_by: 'Module::Build version 0.3603'
+license: unrestricted
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Software-GenoScan
+provides:
+  Software::GenoScan:
+    file: lib/Software/GenoScan.pm
+    version: v1.0.0
+  Software::GenoScan::CommandProcessor:
+    file: lib/Software/GenoScan/CommandProcessor.pm
+    version: v1.0.0
+  Software::GenoScan::FoldVisualizer:
+    file: lib/Software/GenoScan/FoldVisualizer.pm
+    version: v1.0.0
+  Software::GenoScan::HSS_Annotator:
+    file: lib/Software/GenoScan/HSS_Annotator.pm
+    version: v1.0.0
+  Software::GenoScan::HairpinClassifier:
+    file: lib/Software/GenoScan/HairpinClassifier.pm
+    version: v1.0.0
+  Software::GenoScan::InputProcessor:
+    file: lib/Software/GenoScan/InputProcessor.pm
+    version: v1.0.0
+  Software::GenoScan::OutputProcessor:
+    file: lib/Software/GenoScan/OutputProcessor.pm
+    version: v1.0.0
+  Software::GenoScan::Regression:
+    file: lib/Software/GenoScan/Regression.pm
+    version: v1.0.0
+  Software::GenoScan::Segmentor:
+    file: lib/Software/GenoScan/Segmentor.pm
+    version: v1.0.0
+  Software::GenoScan::SeqAnnotator:
+    file: lib/Software/GenoScan/SeqAnnotator.pm
+    version: v1.0.0
+version: v1.0.0
