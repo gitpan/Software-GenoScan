@@ -17,32 +17,35 @@ name: Software-GenoScan
 provides:
   Software::GenoScan:
     file: lib/Software/GenoScan.pm
-    version: v1.0.0
+    version: v1.0.1
   Software::GenoScan::CommandProcessor:
     file: lib/Software/GenoScan/CommandProcessor.pm
-    version: v1.0.0
+    version: v1.0.1
   Software::GenoScan::FoldVisualizer:
     file: lib/Software/GenoScan/FoldVisualizer.pm
-    version: v1.0.0
+    version: v1.0.1
   Software::GenoScan::HSS_Annotator:
     file: lib/Software/GenoScan/HSS_Annotator.pm
-    version: v1.0.0
+    version: v1.0.1
   Software::GenoScan::HairpinClassifier:
     file: lib/Software/GenoScan/HairpinClassifier.pm
-    version: v1.0.0
+    version: v1.0.1
+  Software::GenoScan::HairpinExtractor:
+    file: lib/Software/GenoScan/HairpinExtractor.pm
+    version: v1.0.1
   Software::GenoScan::InputProcessor:
     file: lib/Software/GenoScan/InputProcessor.pm
-    version: v1.0.0
+    version: v1.0.1
   Software::GenoScan::OutputProcessor:
     file: lib/Software/GenoScan/OutputProcessor.pm
-    version: v1.0.0
+    version: v1.0.1
   Software::GenoScan::Regression:
     file: lib/Software/GenoScan/Regression.pm
-    version: v1.0.0
+    version: v1.0.1
   Software::GenoScan::Segmentor:
     file: lib/Software/GenoScan/Segmentor.pm
-    version: v1.0.0
+    version: v1.0.1
   Software::GenoScan::SeqAnnotator:
     file: lib/Software/GenoScan/SeqAnnotator.pm
-    version: v1.0.0
-version: v1.0.0
+    version: v1.0.1
+version: v1.0.1

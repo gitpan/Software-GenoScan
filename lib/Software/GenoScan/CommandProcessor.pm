@@ -5,7 +5,7 @@ use strict;
 
 require Exporter;
 
-our $VERSION = "v1.0.0";
+our $VERSION = "v1.0.1";
 our @ISA = qw(Exporter);
 our %EXPORT_TAGS = ("all" => [ qw(
 	processCmd
@@ -172,6 +172,8 @@ sub commandHelp(){
 	my $doc = <<END;
 Usage
     perl genoscan.pl [Options]
+
+Version $VERSION
 
 Options
     General

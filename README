@@ -1,4 +1,4 @@
-GenoScan version v1.0.0
+GenoScan version v1.0.1
 ============================
 
 This Perl module is the implementation of the GenoScan software for genome-scale miRNA discovery. It is
@@ -33,7 +33,7 @@ RUNNING GENOSCAN
 The quickest way to test the algorithm is to use the run_genoscan.pl script in the t/ folder. After the
 module is installed, navigate the the t/ folder and type the following:
 
-perl run_genoscan.pl -d fake_genome -o output
+perl genoscan.pl -d fake_genome -o output
 
 For a description of command line arguments, input and output files, please see the CPAN documentation.
 

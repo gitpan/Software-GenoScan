@@ -6,7 +6,7 @@ use strict;
 use Software::GenoScan::Regression qw(calcHpFeatures getRegModel readRegModel hairpinRVA);
 require Exporter;
 
-our $VERSION = "v1.0.0";
+our $VERSION = "v1.0.1";
 our @ISA = qw(Exporter);
 our %EXPORT_TAGS = ("all" => [ qw(
 	classifyHairpins
@@ -52,7 +52,9 @@ sub classifyHairpins($ $ $ $){
 	my @annotFiles = grep(/[^~]$/, @files);
 	foreach my $annotFile (@annotFiles){
 		$fileCounter++;
-		print("    Classifying chunk $fileCounter/$numFiles\r");
+		if($VERBOSE){
+			print("    Classifying chunk $fileCounter/$numFiles\r");
+		}
 		
 		#Read annotated chunk
 		open(HAIRPINS, "$OUTPUT_DIR/step_4/annotation/$annotFile") or die "GenoScan error: Unable to read annotation file\n";
@@ -76,7 +78,9 @@ sub classifyHairpins($ $ $ $){
 			print(REPORT "$name\t$seq\t$probability\n");
 		}
 	}
-	print("\n");
+	if($VERBOSE){
+		print("\n");
+	}
 	close(REPORT);
 }
 

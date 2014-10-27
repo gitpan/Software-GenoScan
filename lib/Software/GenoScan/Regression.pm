@@ -7,7 +7,7 @@ use strict;
 use Software::GenoScan::FoldVisualizer qw(visualizeFold);
 use Software::GenoScan::HSS_Annotator qw(annotateHSS);
 
-our $VERSION = "v1.0.0";
+our $VERSION = "v1.0.1";
 our @ISA = qw(Exporter);
 our %EXPORT_TAGS = ("all" => [ qw(
 	calcHpFeatures getRegModel readRegModel hairpinRVA benchmarkRegModel retrainRegModel
@@ -227,9 +227,8 @@ sub hairpinRVA($ $ $ $ $ $){
 		print(STL join("\n", @stlFolded) . "\n");
 		close(STL);
 	}
-	print("\n");
 	if($VERBOSE){
-		print("    Number of STL hairpins: $stlCounter\n");
+		print("\n    Number of STL hairpins: $stlCounter\n");
 	}
 	if($stlCounter == 0){
 		die "GenoScan: No STL hairpins, terminating\n";
@@ -249,7 +248,9 @@ sub hairpinRVA($ $ $ $ $ $){
 		$visualFile =~ s/\.folded/.visual/;
 		visualizeFold("$foldedFolder/$foldFile", "$visualFolder/$visualFile");
 	}
-	print("\n");
+	if($VERBOSE){
+		print("\n");
+	}
 	
 	#Annotate chunks
 	$fileCounter = 0;
@@ -264,7 +265,9 @@ sub hairpinRVA($ $ $ $ $ $){
 		$annotFile =~ s/\.visual/.annotation/;
 		annotateHSS("$visualFolder/$visualFile", "$annotationFolder/$annotFile");
 	}
-	print("\n");
+	if($VERBOSE){
+		print("\n");
+	}
 }
 
 #Description: Internal function used to write R-script datasets

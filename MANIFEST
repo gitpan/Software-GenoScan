@@ -17,6 +17,7 @@ lib/Software/GenoScan/CommandProcessor.pm
 lib/Software/GenoScan/SeqAnnotator.pm
 lib/Software/GenoScan/InputProcessor.pm
 lib/Software/GenoScan/Segmentor.pm
+lib/Software/GenoScan/HairpinExtractor.pm
 lib/Software/GenoScan/HairpinClassifier.pm
 lib/Software/GenoScan/HSS_Annotator.pm
 lib/Software/GenoScan/FoldVisualizer.pm

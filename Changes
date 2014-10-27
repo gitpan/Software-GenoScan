@@ -1,5 +1,9 @@
 Revision history for Perl extension GenoScan.
 
+v1.0.1 October 2014
+	- Added HairpinExtractor.pm, which was missing in the
+	  release version
+
 v1.0.0 August 2014
 	- GenoScan release version was build
 

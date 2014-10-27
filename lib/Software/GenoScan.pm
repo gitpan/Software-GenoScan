@@ -14,7 +14,7 @@ use Software::GenoScan::OutputProcessor qw(writeOutput);
 use Software::GenoScan::Regression qw(benchmarkRegModel retrainRegModel);
 require Exporter;
 
-our $VERSION = "v1.0.0";
+our $VERSION = "v1.0.1";
 our @ISA = qw(Exporter);
 our %EXPORT_TAGS = ("all" => [ qw(
 	runGenoScan

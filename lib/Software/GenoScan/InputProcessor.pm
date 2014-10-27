@@ -6,7 +6,7 @@ use strict;
 use Software::GenoScan::Segmentor qw(segmentize);
 require Exporter;
 
-our $VERSION = "v1.0.0";
+our $VERSION = "v1.0.1";
 our @ISA = qw(Exporter);
 our %EXPORT_TAGS = ("all" => [ qw(
 	processInput
@@ -323,7 +323,9 @@ sub processInput($ $ $ $){
 		print(FOLDED join("\n\n", @passFolded));
 		close(FOLDED);
 	}
-	print("\n");
+	if($VERBOSE){
+		print("\n");
+	}
 }
 
 #Description: Sets the RNAfold running command
