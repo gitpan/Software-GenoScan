@@ -2,8 +2,6 @@ MANIFEST
 README
 Changes
 Build.PL
-META.json
-META.yml
 pod/GenoScan.pod
 t/genoscan.pl
 t/fake_genome/fake_genome_chr1.fa
@@ -31,3 +29,4 @@ datasets/negative_hairpins_hsa
 datasets/negative_windows_hsa
 datasets/genomic_hairpins_hsa
 datasets/genomic_windows_hsa
+META.yml

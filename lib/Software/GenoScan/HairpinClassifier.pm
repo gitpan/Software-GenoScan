@@ -6,7 +6,7 @@ use strict;
 use Software::GenoScan::Regression qw(calcHpFeatures getRegModel readRegModel hairpinRVA);
 require Exporter;
 
-our $VERSION = "v1.0.1";
+our $VERSION = "v1.0.2";
 our @ISA = qw(Exporter);
 our %EXPORT_TAGS = ("all" => [ qw(
 	classifyHairpins

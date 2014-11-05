@@ -7,7 +7,7 @@ use strict;
 use Software::GenoScan::FoldVisualizer qw(visualizeFold);
 use Software::GenoScan::HSS_Annotator qw(annotateHSS);
 
-our $VERSION = "v1.0.1";
+our $VERSION = "v1.0.2";
 our @ISA = qw(Exporter);
 our %EXPORT_TAGS = ("all" => [ qw(
 	calcHpFeatures getRegModel readRegModel hairpinRVA benchmarkRegModel retrainRegModel

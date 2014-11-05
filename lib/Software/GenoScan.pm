@@ -14,7 +14,7 @@ use Software::GenoScan::OutputProcessor qw(writeOutput);
 use Software::GenoScan::Regression qw(benchmarkRegModel retrainRegModel);
 require Exporter;
 
-our $VERSION = "v1.0.1";
+our $VERSION = "v1.0.2";
 our @ISA = qw(Exporter);
 our %EXPORT_TAGS = ("all" => [ qw(
 	runGenoScan
@@ -45,7 +45,7 @@ my $JUMP = 1;
 my $VERBOSE = 0;
 
 #RNAfold run command
-my $RNAfold = "RNAfold -noPS";
+my $RNAfold = "RNAfold --noPS";
 
 #Description: Determines environment paths of all prerequisites
 #Parameters: None
@@ -55,13 +55,14 @@ sub checkEnvSanity(){
 	if(!$path){
 		die "GenoScan error: RNAfold not found, terminating\n";
 	}
-	system("echo 'A' | RNAfold -noPS &> log");
+	system("echo 'A' | $RNAfold &> log");
 	open(LOG, "log") or die "GenoScan error: Unable to run RNAfold\n";
-	my $log = join("", <LOG>);
+	my $log = <LOG>;
+	$log =~ s/\s|\r//g;
 	close(LOG);
 	system("rm log");
-	if($log =~ m/RNAfold: invalid option/){
-		$RNAfold = "RNAfold --noPS";
+	if(!$log){
+		$RNAfold = "RNAfold -noPS";
 	}
 	Software::GenoScan::InputProcessor::commandRNAfold($RNAfold);
 	Software::GenoScan::Regression::commandRNAfold($RNAfold);
